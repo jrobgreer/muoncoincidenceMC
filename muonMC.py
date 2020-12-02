@@ -7,7 +7,7 @@ from numpy import random
 # and efficiency.                                        #
 ##########################################################
 
-muon_flux = 1 #s^-1 cm^-2
+muon_flux = 1 #min^-1 cm^-2
 paddle_size_x = 30 #cm
 paddle_size_y = 15 #cm
 dist_between_paddles = 30 #cm
