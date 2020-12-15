@@ -44,13 +44,13 @@ angle_distribution()
 def particle_path_randomizer():
 		
 	theta_x = np.random.choice( angle_list, p = normalized_list )
-	theta_y = np.random.choice( angle_list, p = normalized_list )
+	#Change here, two cos^2 relationships originally gave a preference to particular y angle values, but cos^2 distribution should hold no matter which orientation
+	theta_y = np.random.random()*2*np.pi
 	
 	#Equal probability of negative and positive angles
 	sign_multiplier_x = np.random.choice( [-1,1], p = [0.5, 0.5] )
 	theta_x = theta_x * sign_multiplier_x
-	sign_multiplier_y = np.random.choice( [-1,1], p = [0.5, 0.5] )
-	theta_y = theta_y * sign_multiplier_y
+	
 	return theta_x, theta_y
 	
 
